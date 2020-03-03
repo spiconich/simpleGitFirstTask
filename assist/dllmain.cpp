@@ -2,9 +2,6 @@
 #include <iostream>
 #include <string>
 #include "dllHeader.h"
-
-//test for 2nd branch
-
 BOOL APIENTRY DllMain( HMODULE hModule,
                        DWORD  ul_reason_for_call,
                        LPVOID lpReserved
@@ -20,7 +17,6 @@ BOOL APIENTRY DllMain( HMODULE hModule,
     }
     return TRUE;
 }
-
 
 std::string byte2ch(BYTE* data, int size)
 {
@@ -41,7 +37,6 @@ bool checkNTFSstring(std::string OEM)
     {
         return false;
     }
-    
 }
 extern "C" __declspec(dllexport) void checkIsNTFS(bool* rez, bool* pointerRez, bool* readRez,bool* ntfsRez, std::string volumeLetter)
 {

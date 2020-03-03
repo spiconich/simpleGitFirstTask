@@ -2,8 +2,6 @@
 #include <Windows.h>
 #include <string>
 #include "diffDef.h"
-
-//rework for git
 void showMe()
 {
     std::cout <<"\n"<<"          Press ctrl+c to exit" << std::endl;
@@ -154,7 +152,7 @@ int main()
                                 dllcheckIsNTFS(checkResult, checkPointer, checkReading, IsNTFSResult, choosenVolume);
                                 if (checkResult == true && checkPointer == true && checkReading == true && IsNTFSResult == true)
                                {
-                                  nTry = 3; // Exiting with msg
+                                  nTry = 3;
                                   std::cout << "   All checks done , System is NTFS, searching more info..." << std::endl;
                                   noMrChcks dllNTFSstruc = (noMrChcks)GetProcAddress(hLib, "noMoreChecks");
                                   if (!dllNTFSstruc)
@@ -218,8 +216,7 @@ int main()
                     }
                 }
             }
-      
-            FreeLibrary(hLib); }
+    FreeLibrary(hLib); }
     }
 }
 
