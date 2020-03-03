@@ -1,2 +1,2 @@
-# reworkedNTFSdll
- reworked "first" project with using console 
+ reworked "first" task with using console 
+ +simple branches
